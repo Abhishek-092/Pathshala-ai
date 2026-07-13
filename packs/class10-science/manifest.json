@@ -1,0 +1,14 @@
+{
+  "id": "class10-science",
+  "name": "Class 10 General Science",
+  "description": "Comprehensive physics, chemistry, and biology pack covering basic laws, equations, and structures.",
+  "version": "1.2.0",
+  "curriculum": "CBSE / National Curriculum",
+  "languages": ["English", "Hindi", "Tamil", "Bengali"],
+  "conceptCount": 5,
+  "quizCount": 5,
+  "fileSize": "14.2 MB",
+  "vramEstimate": "1.8 GB",
+  "embeddingModel": "local-minilm-l6-v2",
+  "lastUpdated": "2026-07-10T12:00:00Z"
+}
