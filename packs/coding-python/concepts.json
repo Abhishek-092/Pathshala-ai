@@ -1,0 +1,42 @@
+[
+  {
+    "id": "py-intro",
+    "name": "Python Intro & Syntax",
+    "difficulty": "Easy",
+    "prerequisites": [],
+    "summary": "Getting started with Python, variables, basic input/output, and fundamental data types (int, float, string, boolean).",
+    "timeToComplete": "20 mins"
+  },
+  {
+    "id": "py-loops",
+    "name": "Control Flow & Loops",
+    "difficulty": "Medium",
+    "prerequisites": ["py-intro"],
+    "summary": "Using if-else conditions, while loops, and for loops to control program execution flow.",
+    "timeToComplete": "30 mins"
+  },
+  {
+    "id": "py-lists",
+    "name": "Lists & Tuples",
+    "difficulty": "Medium",
+    "prerequisites": ["py-intro"],
+    "summary": "Creating, indexing, slicing, and manipulating lists and immutable tuples in Python.",
+    "timeToComplete": "25 mins"
+  },
+  {
+    "id": "py-dicts",
+    "name": "Dictionaries & Sets",
+    "difficulty": "Medium",
+    "prerequisites": ["py-lists"],
+    "summary": "Storing key-value pairs in dictionaries and using sets for unique collections.",
+    "timeToComplete": "30 mins"
+  },
+  {
+    "id": "py-funcs",
+    "name": "Functions & Modules",
+    "difficulty": "Hard",
+    "prerequisites": ["py-loops", "py-lists"],
+    "summary": "Defining functions, parameters, return values, variable scope, and importing standard modules.",
+    "timeToComplete": "40 mins"
+  }
+]
