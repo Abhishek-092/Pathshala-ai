@@ -1,0 +1,14 @@
+{
+  "id": "coding-python",
+  "name": "Programming in Python",
+  "description": "Learn basic programming, variables, control structures, lists, dictionaries, functions, and OOP.",
+  "version": "1.0.0",
+  "curriculum": "Skill Development",
+  "languages": ["English", "Hindi"],
+  "conceptCount": 5,
+  "quizCount": 5,
+  "fileSize": "8.5 MB",
+  "vramEstimate": "1.2 GB",
+  "embeddingModel": "local-minilm-l6-v2",
+  "lastUpdated": "2026-07-12T15:30:00Z"
+}
