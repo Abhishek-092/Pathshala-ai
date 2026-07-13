@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id": "py-intro", "label": "Syntax & Types", "group": "programming", "level": 1, "x": 100, "y": 150},
+    {"id": "py-loops", "label": "Loops & Flow", "group": "programming", "level": 2, "x": 300, "y": 100},
+    {"id": "py-lists", "label": "Lists & Tuples", "group": "programming", "level": 2, "x": 300, "y": 200},
+    {"id": "py-dicts", "label": "Dicts & Sets", "group": "programming", "level": 3, "x": 500, "y": 250},
+    {"id": "py-funcs", "label": "Functions & Scope", "group": "programming", "level": 4, "x": 700, "y": 150}
+  ],
+  "edges": [
+    {"from": "py-intro", "to": "py-loops"},
+    {"from": "py-intro", "to": "py-lists"},
+    {"from": "py-lists", "to": "py-dicts"},
+    {"from": "py-loops", "to": "py-funcs"},
+    {"from": "py-lists", "to": "py-funcs"}
+  ]
+}
