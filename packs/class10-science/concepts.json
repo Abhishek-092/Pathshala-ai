@@ -1,0 +1,42 @@
+[
+  {
+    "id": "chem-reactions",
+    "name": "Chemical Reactions and Equations",
+    "difficulty": "Medium",
+    "prerequisites": [],
+    "summary": "Introduction to chemical formulas, writing equations, and balancing chemical reactions. Types of reactions: combination, decomposition, displacement, and redox.",
+    "timeToComplete": "35 mins"
+  },
+  {
+    "id": "acids-bases",
+    "name": "Acids, Bases, and Salts",
+    "difficulty": "Medium",
+    "prerequisites": ["chem-reactions"],
+    "summary": "Chemical properties of acids and bases, pH scale, role of pH in daily life, and preparation of common salts like Bleaching Powder, Baking Soda, and Washing Soda.",
+    "timeToComplete": "45 mins"
+  },
+  {
+    "id": "metals-nonmetals",
+    "name": "Metals and Non-Metals",
+    "difficulty": "Hard",
+    "prerequisites": ["chem-reactions"],
+    "summary": "Physical and chemical properties of metals and non-metals, reactivity series, formation of ionic compounds, metallurgy principles, and corrosion prevention.",
+    "timeToComplete": "50 mins"
+  },
+  {
+    "id": "carbon-compounds",
+    "name": "Carbon and its Compounds",
+    "difficulty": "Hard",
+    "prerequisites": ["chem-reactions", "acids-bases"],
+    "summary": "Covalent bonding in carbon compounds, versatile nature of carbon, homologous series, nomenclature, chemical properties of carbon compounds, and soaps/detergents.",
+    "timeToComplete": "60 mins"
+  },
+  {
+    "id": "life-processes",
+    "name": "Life Processes",
+    "difficulty": "Medium",
+    "prerequisites": [],
+    "summary": "Basic concepts of nutrition, respiration, transport, and excretion in plants and animals.",
+    "timeToComplete": "55 mins"
+  }
+]
