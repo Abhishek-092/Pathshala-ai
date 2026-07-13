@@ -14,111 +14,73 @@
   <link rel="manifest" href="./manifest.webmanifest">
 </head>
 <body>
-  <div class="app-workspace-container">
+  <!-- Clean Full-Screen Application Shell -->
+  <div class="app-shell">
     
-    <!-- Left Side: Simulator Emulator Frame -->
-    <div class="emulator-column">
-      <div class="premium-device-shell">
-        <div class="notch"></div>
-        <div class="speaker"></div>
-        
-        <!-- Screen Header Chrome bar -->
-        <div class="phone-screen-header">
-          <div class="wifi-indicator">⚡ Offline AI OS</div>
-          <div class="header-title" id="header-screen-title">Splash Screen</div>
-          <div class="battery-status">100% 🔋</div>
-        </div>
-
-        <!-- Phone screen viewport -->
-        <div class="phone-screen-viewport" id="phone-screen-container">
-          <!-- Dynamically populated via pages router -->
-        </div>
-
-        <!-- Bottom Navigation Bar -->
-        <div class="phone-screen-navigation">
-          <div class="nav-item active" data-route="dashboard">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Home</span>
-          </div>
-          <div class="nav-item" data-route="subjects">
-            <span class="nav-icon">📚</span>
-            <span class="nav-label">Subjects</span>
-          </div>
-          <div class="nav-item" data-route="aiTutor">
-            <span class="nav-icon">🤖</span>
-            <span class="nav-label">AI Tutor</span>
-          </div>
-          <div class="nav-item" data-route="learningPath">
-            <span class="nav-icon">🛤️</span>
-            <span class="nav-label">Path</span>
-          </div>
-          <div class="nav-item" data-route="profile">
-            <span class="nav-icon">👤</span>
-            <span class="nav-label">Profile</span>
-          </div>
-        </div>
-
-        <div class="home-indicator"></div>
+    <!-- Top Minimalist Status bar (Calming, clean, Apple-inspired) -->
+    <header class="app-header">
+      <div class="header-left">
+        <span class="logo-text">Pathshala AI</span>
+        <span class="offline-dot-badge">● Local AI Engine Active</span>
       </div>
-    </div>
-
-    <!-- Right Side: Desktop Controls & Judge Telemetry Debugger -->
-    <div class="desktop-controls-column">
-      <div class="desktop-banner-card">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div class="logo-box">P</div>
-          <div>
-            <h1>Pathshala AI</h1>
-            <p>On-Device Offline Learning Operating System</p>
-          </div>
-        </div>
-        <p class="pitch-text">
-          Designed specifically for students in low-connectivity regions. The entire system (Knowledge index, vector routing, LLM generation, learning sequencing) runs <strong>entirely on-device</strong> without cloud reliance.
-        </p>
+      <div class="header-right">
+        <span id="streak-indicator-top">🔥 1 Day Streak</span>
       </div>
+    </header>
 
-      <!-- Quick Emulator Shortcuts -->
-      <div class="control-box-card">
-        <h3>⚡ Hackathon Demo Shortcuts</h3>
-        <div class="shortcut-buttons-grid">
-          <button onclick="window.location.hash='splash'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Splash Screen</button>
-          <button onclick="window.location.hash='onboarding'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Onboarding</button>
-          <button onclick="window.location.hash='packSelection'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Select Pack</button>
-          <button onclick="window.location.hash='dashboard'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Dashboard</button>
-          <button onclick="window.location.hash='subjects'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Subjects</button>
-          <button onclick="window.location.hash='chapters'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Chapters</button>
-          <button onclick="window.location.hash='aiTutor'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">AI Tutor</button>
-          <button onclick="window.location.hash='lesson'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Lesson</button>
-          <button onclick="window.location.hash='quiz'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Quiz Checkpoint</button>
-          <button onclick="window.location.hash='mastery'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Mastery Graph</button>
-          <button onclick="window.location.hash='learningPath'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">AI Learning Path</button>
-          <button onclick="window.location.hash='downloads'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Downloads Manager</button>
-          <button onclick="window.location.hash='parent'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Parent Dashboard</button>
-          <button onclick="window.location.hash='teacher'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Teacher Creator</button>
-          <button onclick="window.location.hash='profile'; window.dispatchEvent(new HashChangeEvent('hashchange'))" class="ctrl-btn">Profile Settings</button>
-        </div>
+    <!-- Main Dynamic Content Canvas (Centered with generous padding & breathing room) -->
+    <main class="app-main-canvas" id="phone-screen-container">
+      <!-- Dynamic pages rendered here -->
+    </main>
+
+    <!-- Bottom Navigation Bar (Elegant, floating-pill-like or clean bottom-bar) -->
+    <nav class="app-navigation-bar">
+      <div class="nav-item active" data-route="dashboard">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Home</span>
       </div>
-
-      <!-- App Chrome Settings -->
-      <div class="control-box-card">
-        <h3>💻 Emulator Console Options</h3>
-        <div style="display:flex; gap:10px; margin-top:10px;">
-          <button class="ctrl-btn" id="chrome-darkmode-toggle">🌙 Dark Mode</button>
-          <button class="ctrl-btn" onclick="document.getElementById('dev-telemetry-panel').classList.toggle('collapsed')">🛠️ Toggle Debugger</button>
-        </div>
+      <div class="nav-item" data-route="subjects">
+        <span class="nav-icon">📚</span>
+        <span class="nav-label">Learn</span>
       </div>
-
-      <!-- Dev Telemetry Console Mount -->
-      <div id="dev-telemetry-container"></div>
-    </div>
+      <div class="nav-item" data-route="aiTutor">
+        <span class="nav-icon">🤖</span>
+        <span class="nav-label">AI Tutor</span>
+      </div>
+      <div class="nav-item" data-route="practice">
+        <span class="nav-icon">📝</span>
+        <span class="nav-label">Practice</span>
+      </div>
+      <div class="nav-item" data-route="profile">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Profile</span>
+      </div>
+    </nav>
   </div>
 
-  <!-- Boot Module Scripts -->
+  <!-- Hidden Judge Mode Telemetry Container (Invisible to normal users, toggles via Ctrl+Shift+D) -->
+  <div id="dev-telemetry-container" class="telemetry-overlay-hidden"></div>
+
+  <!-- Boot Scripts -->
   <script type="module" src="./src/core/app.js"></script>
 
-  <!-- URL Hash Router Sync for Demo Buttons -->
+  <!-- Keyboard Shortcuts & Theme Boot -->
   <script type="module">
     import { router } from "./src/core/router.js";
+    
+    // Toggle Debugger overlay with Ctrl+Shift+D
+    window.addEventListener("keydown", (e) => {
+      if (e.ctrlKey && e.shiftKey && e.code === "KeyD") {
+        e.preventDefault();
+        const container = document.getElementById("dev-telemetry-container");
+        if (container) {
+          container.classList.toggle("telemetry-overlay-hidden");
+          container.classList.toggle("telemetry-overlay-visible");
+        }
+      }
+    });
+
+    // Hash navigation sync
     window.addEventListener("hashchange", () => {
       const hash = window.location.hash.substring(1);
       if (hash && router.routes[hash]) {
