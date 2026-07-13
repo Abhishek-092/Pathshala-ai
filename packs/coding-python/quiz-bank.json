@@ -1,0 +1,46 @@
+[
+  {
+    "id": "quiz-py-1",
+    "conceptId": "py-intro",
+    "type": "mcq",
+    "question": "What is the correct file extension for Python files?",
+    "options": [".pyt", ".py", ".pyw", ".python"],
+    "answer": ".py",
+    "explanation": "Python files end with the extension '.py'. You run them with the 'python filename.py' command."
+  },
+  {
+    "id": "quiz-py-2",
+    "conceptId": "py-loops",
+    "type": "tf",
+    "question": "A 'while' loop in Python runs indefinitely if the condition remains True.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "A while loop repeats its body as long as the condition evaluates to True. If it never changes to False, it creates an infinite loop."
+  },
+  {
+    "id": "quiz-py-3",
+    "conceptId": "py-lists",
+    "type": "fib",
+    "question": "To add an element to the end of a list, you use the _______ method.",
+    "answer": "append",
+    "explanation": "The list.append(x) method inserts the item 'x' at the end of the list. E.g., my_list.append('new_item')."
+  },
+  {
+    "id": "quiz-py-4",
+    "conceptId": "py-dicts",
+    "type": "mcq",
+    "question": "Which of the following creates a dictionary?",
+    "options": ["d = []", "d = ()", "d = {}", "d = set()"],
+    "answer": "d = {}",
+    "explanation": "Curly braces d = {} create an empty dictionary. To create an empty set, you must use d = set()."
+  },
+  {
+    "id": "quiz-py-5",
+    "conceptId": "py-funcs",
+    "type": "mcq",
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["func", "define", "def", "function"],
+    "answer": "def",
+    "explanation": "The 'def' keyword starts a function definition in Python. Syntax: def function_name():"
+  }
+]
