@@ -1,6 +1,6 @@
 import { aiOrchestrator } from "../../ai/orchestrator.js";
 import { sessionManager } from "../../ai/sessionManager.js";
-import { accessibilityManager } from "../accessibility.js";
+import { accessibilityManager } from "../components/accessibility.js";
 import { router } from "../../core/router.js";
 
 export function aiTutorPage(container, params = {}) {
