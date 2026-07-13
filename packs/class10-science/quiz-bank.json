@@ -1,0 +1,51 @@
+[
+  {
+    "id": "quiz-chem-1",
+    "conceptId": "chem-reactions",
+    "type": "mcq",
+    "question": "What happens when dilute Hydrochloric Acid is added to Iron filings?",
+    "options": [
+      "Hydrogen gas and iron chloride are produced.",
+      "Chlorine gas and iron hydroxide are produced.",
+      "No reaction takes place.",
+      "Iron salt and water are produced."
+    ],
+    "answer": "Hydrogen gas and iron chloride are produced.",
+    "explanation": "Dilute HCl reacts with iron (Fe) to form Iron(II) chloride (FeCl2) and release Hydrogen gas (H2). Equation: Fe + 2HCl -> FeCl2 + H2."
+  },
+  {
+    "id": "quiz-acids-1",
+    "conceptId": "acids-bases",
+    "type": "tf",
+    "question": "An aqueous solution with a pH of 8 is acidic.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "A pH level of 7 is neutral. Values below 7 are acidic, while values above 7 (up to 14) are basic/alkaline. Therefore, pH 8 is basic."
+  },
+  {
+    "id": "quiz-metals-1",
+    "conceptId": "metals-nonmetals",
+    "type": "fib",
+    "question": "The most ductile metal that can be drawn into thin wires is _______.",
+    "answer": "gold",
+    "explanation": "Gold is the most ductile metal. A wire of about 2 km length can be drawn from just one gram of gold."
+  },
+  {
+    "id": "quiz-carbon-1",
+    "conceptId": "carbon-compounds",
+    "type": "mcq",
+    "question": "Which of the following compounds belongs to the homologous series of alkanes?",
+    "options": ["C2H4", "C3H4", "C3H8", "C2H2"],
+    "answer": "C3H8",
+    "explanation": "Alkanes follow the general formula CnH2n+2. For n=3, the formula yields C3H8 (Propane)."
+  },
+  {
+    "id": "quiz-life-1",
+    "conceptId": "life-processes",
+    "type": "mcq",
+    "question": "In plants, transportation of water and minerals is carried out by which tissue?",
+    "options": ["Phloem", "Xylem", "Parenchyma", "Collenchyma"],
+    "answer": "Xylem",
+    "explanation": "Xylem vessels and tracheids transport water and dissolved minerals from the roots upwards. Phloem transports food/sucrose."
+  }
+]
