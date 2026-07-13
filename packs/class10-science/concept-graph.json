@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {"id": "chem-reactions", "label": "Chemical Reactions", "group": "chemistry", "level": 1, "x": 100, "y": 150},
+    {"id": "acids-bases", "label": "Acids & Bases", "group": "chemistry", "level": 2, "x": 300, "y": 100},
+    {"id": "metals-nonmetals", "label": "Metals & Nonmetals", "group": "chemistry", "level": 2, "x": 300, "y": 200},
+    {"id": "carbon-compounds", "label": "Carbon Chemistry", "group": "chemistry", "level": 3, "x": 500, "y": 150},
+    {"id": "life-processes", "label": "Life Processes", "group": "biology", "level": 1, "x": 100, "y": 350}
+  ],
+  "edges": [
+    {"from": "chem-reactions", "to": "acids-bases"},
+    {"from": "chem-reactions", "to": "metals-nonmetals"},
+    {"from": "acids-bases", "to": "carbon-compounds"},
+    {"from": "metals-nonmetals", "to": "carbon-compounds"}
+  ]
+}
