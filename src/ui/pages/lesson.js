@@ -15,56 +15,81 @@ export async function lessonPage(container, params = {}) {
   const mapping = await curriculumEngine.getCompetencyMapping(conceptId);
 
   container.innerHTML = `
-    <div class="lesson-page">
-      <div class="lesson-header">
-        <span class="difficulty-lbl ${concept.difficulty.toLowerCase()}">${concept.difficulty} Level</span>
-        <h2>${concept.name}</h2>
-      </div>
+    <main class="pb-32 max-w-[800px] mx-auto">
+      
+      <!-- Hero Illustration Area -->
+      <section class="mb-12 relative h-80 rounded-[32px] overflow-hidden group shadow-md border border-slate-200/40">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
+        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbqNGu3ploCa1lc-WuPcV2rTh4GJfm2Z56ovbIjVrGfjROPeJloO99b_1AhBDaC6vTA8RmSvoble9d1m1fk35sqIb6u3RUNSpQ81dqtYimg6lodbbfJ13MyyJ16UxLSqXF8POg8aTcgTMVxWpStFuV95pazCqqg2-OhoPMYWCJy9QdZRQk8dztn_On4__tLNFlYzjD-sDS4rJbUA_58QnEYHlpVXiZaUhe3v7CTKDOGNSW8ISK9_kczg" alt="Lesson banner">
+        <div class="absolute bottom-8 left-8 z-20">
+          <span class="px-4 py-1.5 bg-primary/95 text-white text-[10px] font-bold rounded-full mb-3 inline-block uppercase tracking-wider">UNIT CONCEPT</span>
+          <h1 class="text-3xl font-bold text-white font-headline drop-shadow-sm">${concept.name}</h1>
+        </div>
+      </section>
 
       <!-- Learning Objectives -->
-      <div class="objective-card">
-        <h4>🎯 Competency & Learning Objectives</h4>
-        <ul>
-          ${mapping.learningOutcomes.map(out => `<li>${out}</li>`).join("")}
-        </ul>
+      <section class="mb-12">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center flex-shrink-0 text-primary">
+            <span class="material-symbols-outlined">target</span>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-slate-800 dark:text-white font-headline mb-2">Learning Objectives</h2>
+            <ul class="text-slate-500 dark:text-slate-400 text-sm list-disc pl-5 leading-relaxed space-y-1">
+              ${mapping.learningOutcomes.map(out => `<li>${out}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept Card -->
+      <section class="mb-12 p-8 bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 rounded-[24px] shadow-sm relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
+        <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2 font-headline">
+          <span class="material-symbols-outlined text-primary">psychology</span>
+          Core Concept
+        </h3>
+        <div class="space-y-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+          <p class="font-semibold text-slate-700 dark:text-slate-300">${concept.summary}</p>
+          <p>This biological/scientific mechanism forms the basis of curriculum mastery. Follow the interactive diagram model below to study it structurally.</p>
+        </div>
+      </section>
+
+      <!-- Interactive Diagram -->
+      <section class="mb-12">
+        <div class="bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 rounded-[32px] p-8 shadow-sm">
+          <div class="flex justify-between items-center mb-6">
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Interactive 3D Diagram Model</h4>
+            <div class="flex gap-2">
+              <button class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 active:scale-95 transition-all">
+                <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+              </button>
+              <button class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 active:scale-95 transition-all">
+                <span class="material-symbols-outlined text-[18px]">refresh</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="aspect-video bg-slate-900 rounded-2xl relative overflow-hidden flex items-center justify-center">
+            <div class="z-20 text-center animate-float">
+              <img class="w-48 h-48 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDglFyTsUKy-E_FfsW7PF1jYcAdl8RZCt8vfDVoCZzJ2SpDww3vHRmAt6n2AsOiJDZN4_EsEGC7v1f7PUvW1Q_kXGJ3Zg41J4LtwCZXiJ7eHHH_SRJIEQ0LQvp60k3rqmJ2cMlfAEF31HD6Jkvhlz3Lr-25gMAnnB3hdij4fp2UZ3RIek4FOYfqULwKCpRK0CdNKBTd06wBUCsp66bYoRiu6sJO3vY8ZHJXY8g4uFVu1FFx11Akm_vlCw" alt="Neuron structure">
+            </div>
+            <div class="absolute bottom-4 right-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] text-white/80 uppercase font-bold tracking-wider flex items-center gap-2">
+              <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              Live Rendering
+            </div>
+          </div>
+          <p class="mt-4 text-center text-xs text-slate-400">Click and drag to rotate the neural/chemical structure. Hover nodes to identify synapses.</p>
+        </div>
+      </section>
+
+      <!-- Action Footer -->
+      <div class="flex justify-between items-center mt-12 gap-4">
+        <button id="btn-lesson-tutor" class="secondary-btn flex-1 py-4">💬 Ask AI Tutor</button>
+        <button id="btn-lesson-quiz" class="primary-btn flex-1 py-4">✍️ Start Assessment</button>
       </div>
 
-      <!-- Content Area -->
-      <div class="lesson-body-content">
-        <div class="concept-definition">
-          <strong>Definition:</strong> ${concept.summary}
-        </div>
-        
-        <p style="margin-top: 15px; line-height: 1.6;">
-          In this module, we explore the core structures of this concept. Our local intelligence engine recommends breaking this topic down into core experiments.
-        </p>
-
-        <!-- Dynamic Diagram SVG Mockup -->
-        <div class="diagram-container">
-          <svg viewBox="0 0 200 120" class="svg-diagram">
-            <rect width="200" height="120" rx="12" fill="#F1F5F9" stroke="#CBD5E1"/>
-            <circle cx="100" cy="60" r="30" fill="#E0E7FF" stroke="#4F46E5" stroke-width="2"/>
-            <text x="100" y="65" font-size="12" font-weight="bold" fill="#4F46E5" text-anchor="middle">REACTION</text>
-            <!-- Molecules diagram -->
-            <circle cx="60" cy="60" r="10" fill="#06B6D4"/>
-            <circle cx="140" cy="60" r="10" fill="#22C55E"/>
-            <path d="M70 60 L130 60" stroke="#94A3B8" stroke-dasharray="4,4"/>
-          </svg>
-          <span class="caption">Figure 1.1: Core concept relationship map</span>
-        </div>
-
-        <div class="key-takeaways">
-          <h4>💡 Key Takeaways</h4>
-          <p>Always review prerequisites before tackling subsequent topics to ensure seamless concept mastery.</p>
-        </div>
-      </div>
-
-      <!-- Footer Buttons -->
-      <div class="lesson-action-footer">
-        <button class="secondary-btn" id="btn-lesson-tutor">💬 Ask AI Tutor</button>
-        <button class="primary-btn" id="btn-lesson-quiz">✍️ Take Checkpoint Quiz</button>
-      </div>
-    </div>
+    </main>
   `;
 
   container.querySelector("#btn-lesson-tutor").addEventListener("click", () => {
