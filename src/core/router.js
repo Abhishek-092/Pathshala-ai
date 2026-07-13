@@ -13,6 +13,7 @@ import { downloadsPage } from "../ui/pages/downloads.js";
 import { parentPage } from "../ui/pages/parent.js";
 import { teacherPage } from "../ui/pages/teacher.js";
 import { profilePage } from "../ui/pages/profile.js";
+import { practicePage } from "../ui/pages/practice.js";
 
 class Router {
   constructor() {
@@ -31,7 +32,8 @@ class Router {
       downloads: downloadsPage,
       parent: parentPage,
       teacher: teacherPage,
-      profile: profilePage
+      profile: profilePage,
+      practice: practicePage
     };
     this.currentPage = "splash";
   }
