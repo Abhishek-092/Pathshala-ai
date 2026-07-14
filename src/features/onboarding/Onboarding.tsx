@@ -32,13 +32,11 @@ export const Onboarding: React.FC = () => {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 py-10 font-headline select-none">
-      {/* Fullscreen Loop Background GIF */}
       <img
         src="/onboarding.gif"
         alt="Onboarding Background"
-        className="absolute inset-0 h-full w-full object-cover z-0 opacity-25 mix-blend-screen"
+        className="absolute inset-0 h-full w-full object-cover z-0 opacity-40"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60 z-5" />
 
       {/* Cinematic Top Navigation Header */}
       <header className="relative z-10 flex justify-between items-center max-w-6xl w-full mx-auto">
