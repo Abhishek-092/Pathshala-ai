@@ -25,7 +25,7 @@ export async function chaptersPage(container) {
   const completionPct = Math.round((masteredCount / 5) * 100);
 
   container.innerHTML = `
-    <main class="relative min-h-screen pb-32 overflow-hidden max-w-[800px] mx-auto">
+    <main class="relative min-h-screen pb-32 overflow-hidden max-w-[1280px] mx-auto">
       
       <!-- Header Section -->
       <div class="text-center mb-16">
