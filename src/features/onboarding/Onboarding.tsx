@@ -36,13 +36,10 @@ export const Onboarding: React.FC = () => {
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black px-6">
-      {/* Loop Fullscreen Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* Fullscreen Loop Background GIF */}
+      <img
         src="/onboarding.gif"
+        alt="Onboarding Background"
         className="absolute inset-0 h-full w-full object-cover z-0 opacity-40 mix-blend-screen"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/35 z-5" />
