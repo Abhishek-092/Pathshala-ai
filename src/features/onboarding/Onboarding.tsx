@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SLIDES = [
   {
-    title: "Build your future,\none deliberate step\nat a time.",
-    description: "Everything you need to learn. Nothing you don't."
+    title: "When the signal fades,\nlearning remains.",
+    description: "The next chapter is always within reach."
   },
   {
     title: "Your personal tutor,\nalways by your side,\ncompletely offline.",
