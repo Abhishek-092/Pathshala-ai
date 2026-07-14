@@ -12,7 +12,7 @@ export function aiTutorPage(container, params = {}) {
 
   function render() {
     container.innerHTML = `
-      <div class="pb-32 max-w-[800px] mx-auto">
+      <div class="pb-32 max-w-[1280px] mx-auto">
         
         <!-- Hero Section: AI Companion -->
         <section class="flex flex-col items-center mb-12">
