@@ -59,6 +59,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   min-height: 100vh;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -66,7 +67,7 @@ body {
 .app-shell {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
