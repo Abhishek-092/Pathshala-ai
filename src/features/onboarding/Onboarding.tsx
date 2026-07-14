@@ -6,7 +6,7 @@ export const Onboarding: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 py-10 font-headline select-none">
+    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 pb-10 font-headline select-none">
       {/* Fullscreen Loop Background GIF */}
       <img
         src="/onboarding.gif"
