@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const SLIDES = [
   {
-    title: "Learn Anywhere.",
-    coloredTitle: "No Internet Required.",
-    description: "Our edge AI technology processes lessons directly on your device. High-quality education even in the most remote corners of the world."
+    title: "Build your future,\none deliberate step\nat a time.",
+    description: "Everything you need to learn. Nothing you don't."
   },
   {
-    title: "Your Personal Teacher.",
-    coloredTitle: "AI explains every concept.",
-    description: "Interactive step-by-step tutoring that adapts to your pace. Pathshala AI doesn't just give answers; it builds deep understanding."
+    title: "Your personal tutor,\nalways by your side,\ncompletely offline.",
+    description: "Interactive on-device AI explanations built for deep understanding."
   },
   {
-    title: "Download Packs.",
-    coloredTitle: "Study forever. Offline.",
-    description: "Curate your library. Once downloaded, your courses and AI models belong to you. No subscription fatigue, just pure learning."
+    title: "Curate your library,\ndownload once,\nstudy forever.",
+    description: "Your courses and AI models belong to you. No internet required."
   }
 ];
 
@@ -35,67 +31,72 @@ export const Onboarding: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black px-6">
+    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 py-10 font-headline select-none">
       {/* Fullscreen Loop Background GIF */}
       <img
         src="/onboarding.gif"
         alt="Onboarding Background"
-        className="absolute inset-0 h-full w-full object-cover z-0 opacity-40 mix-blend-screen"
+        className="absolute inset-0 h-full w-full object-cover z-0 opacity-25 mix-blend-screen"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/35 z-5" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60 z-5" />
 
-      {/* Content Container (No background box, content placed directly on background) */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 max-w-2xl w-full flex flex-col items-center gap-8"
-      >
+      {/* Cinematic Top Navigation Header */}
+      <header className="relative z-10 flex justify-between items-center max-w-6xl w-full mx-auto">
+        <span className="text-sm font-bold tracking-widest uppercase text-white/90">
+          Pathshala <span className="text-cyan-400">AI</span>
+        </span>
+        <nav className="flex gap-8 text-[11px] font-medium tracking-widest uppercase text-white/40">
+          <span className="hover:text-white/80 transition-colors cursor-pointer" onClick={() => navigate("/home")}>Courses</span>
+          <span className="hover:text-white/80 transition-colors cursor-pointer" onClick={() => navigate("/tutor")}>Tutor</span>
+          <span className="hover:text-white/80 transition-colors cursor-pointer" onClick={() => navigate("/practice")}>Practice</span>
+          <span className="hover:text-white/80 transition-colors cursor-pointer" onClick={() => navigate("/profile")}>Profile</span>
+        </nav>
+      </header>
+
+      {/* Centered Cinematic Message (Lots of space) */}
+      <div className="relative z-10 my-auto max-w-4xl w-full mx-auto flex flex-col items-center justify-center text-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col items-center gap-4 text-center"
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col gap-6"
           >
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white font-headline leading-tight">
-              {slide.title} <br />
-              <span className="text-cyan-400 font-headline">
-                {slide.coloredTitle}
-              </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-white/95 font-headline leading-tight whitespace-pre-line">
+              {slide.title}
             </h1>
-            <p className="text-slate-400 text-base md:text-lg max-w-lg leading-relaxed mt-2">
+            <p className="text-white/40 text-sm md:text-base tracking-widest uppercase font-light mt-4">
               {slide.description}
             </p>
           </motion.div>
         </AnimatePresence>
+      </div>
 
-        <div className="w-full flex flex-col items-center gap-8 mt-4">
-          {/* Slides Progress Indicator */}
-          <div className="flex gap-2.5">
-            {SLIDES.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveSlide(idx)}
-                className={`h-1.5 rounded-full transition-all duration-500 ${
-                  idx === activeSlide ? "bg-cyan-400 w-8" : "bg-white/20 hover:bg-white/40 w-2"
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Premium Glass Action Button */}
-          <button
-            onClick={handleNext}
-            className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-black px-10 py-4.5 rounded-full font-bold text-base transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_35px_rgba(255,255,255,0.25)] hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <span>{activeSlide === SLIDES.length - 1 ? "Begin Learning" : "Continue"}</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+      {/* Bottom Actions Footer */}
+      <footer className="relative z-10 flex flex-col items-center gap-8 max-w-6xl w-full mx-auto">
+        {/* Slides Dot Progress Indicator */}
+        <div className="flex gap-3">
+          {SLIDES.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveSlide(idx)}
+              className={`h-1 rounded-full transition-all duration-700 ${
+                idx === activeSlide ? "bg-cyan-400 w-10" : "bg-white/10 w-3"
+              }`}
+            />
+          ))}
         </div>
-      </motion.div>
+
+        {/* Cinematic Button */}
+        <button
+          onClick={handleNext}
+          className="bg-transparent hover:bg-white hover:text-black border border-white/20 text-white/90 px-12 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.05)]"
+        >
+          {activeSlide === SLIDES.length - 1 ? "Begin Journey" : "Continue"}
+        </button>
+      </footer>
     </div>
   );
 };
