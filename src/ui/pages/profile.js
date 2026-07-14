@@ -5,7 +5,7 @@ import { analyticsTracker } from "../../learning/analytics/tracker.js";
 export function profilePage(container) {
   function render() {
     container.innerHTML = `
-      <div class="pb-32 max-w-[800px] mx-auto">
+      <div class="pb-32 max-w-[1280px] mx-auto">
         
         <!-- Profile Header Section -->
         <section class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8">
