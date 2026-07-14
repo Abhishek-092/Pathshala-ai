@@ -1,109 +1,85 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-
-const SLIDES = [
-  {
-    title: "Learn Anywhere.",
-    coloredTitle: "No Internet Required.",
-    description: "Our edge AI technology processes lessons directly on your device. High-quality education even in the most remote corners of the world.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCf_3hdPUIHHyZxxFGjpZTP_TPRHcd7Aiwhyc6DNEdQG7RVj9w4-szUr-Mzu2Gi4Ma1Pt9DLbTh-2zPqE4RA90z4sjvJo-juAc4LPjLINOmzm57zq0jiUUly1fl3z21S8Ifmqs0gayTkjck8TguW1m9NHjbNC4SjIiQfO5mOkvEAPtSme16NPOOb83hTSMg8VXLYL7eVtlty-ZNf8taXZJAZrdQYUIbOj6CZVp-gp2ohy4-AnYZAAMXpQ",
-    bgBlur: "bg-cyan-500/10"
-  },
-  {
-    title: "Your Personal Teacher.",
-    coloredTitle: "AI explains every concept.",
-    description: "Interactive step-by-step tutoring that adapts to your pace. Pathshala AI doesn't just give answers; it builds deep understanding.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDViaHw1XS3E1A_5dKtPsZX4m8n21tAT9YQ79bI69rvHDlspl6EEZUoLj6bzVswfWQNKrsY3F6kz4wJV7irCioUPze6BHm0Oh-QDDXGWCSucYakUYaqiVZxTQb87xV4GFusNk46l_koNB-IR2PcIwUUYdfNcaT3YYjBVfj8GGcY48u_4K40WNZqSM4Yx3lvA3iVOeWkylVlz2MdCgey4nhV9ZpjTfy1uj3cPJ3o4OurCZeNQOCAWYjTtA",
-    bgBlur: "bg-indigo-500/10"
-  },
-  {
-    title: "Download Packs.",
-    coloredTitle: "Study forever. Offline.",
-    description: "Curate your library. Once downloaded, your courses and AI models belong to you. No subscription fatigue, just pure learning.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrPlj80GV6ZT3__n1qlbMmPdcyImpUWXY9fg0p_bj19lvHHb06VxIHo7QNp7U_oU1UhE-pz3ibwF8eEVImA1I6U1hvtDiUuW9X3e1lECi6gWSh1YQfOKnbm6OKpjaCOTdE3gQs4QNml6Rg2LYSYeknYrA0tdxHfAAS-h2bAHwwZmTnkV3yC8JTxBJ0tNqBUC-QrpYc6zZ-LNv_y84CynQHNHIxTACJW1CBtcpVC6xI3IlH95MZhD_9uw",
-    bgBlur: "bg-emerald-500/10"
-  }
-];
 
 export const Onboarding: React.FC = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
   const navigate = useNavigate();
-  const slide = SLIDES[activeSlide];
 
-  const handleNext = () => {
-    if (activeSlide < SLIDES.length - 1) {
-      setActiveSlide(activeSlide + 1);
-    } else {
-      navigate("/home");
-    }
+  const handleStart = () => {
+    navigate("/home");
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center py-12 min-h-screen bg-slate-50 dark:bg-slate-900 px-6">
-      <div className="max-w-[1280px] w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeSlide + "-text"}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-col gap-6 text-center md:text-left"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight font-headline">
-              {slide.title} <br />
-              <span className="text-cyan-600 dark:text-cyan-400 font-headline">
-                {slide.coloredTitle}
-              </span>
-            </h1>
-            <p className="text-slate-500 dark:text-slate-400 text-lg max-w-xl">
-              {slide.description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+    <div className="cinematic-theme relative min-h-screen w-full overflow-hidden flex flex-col justify-between z-10">
+      {/* Background Video / Gif */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+      >
+        <source src="onboarding.gif" type="image/gif" />
+        <img
+          src="onboarding.gif"
+          className="absolute inset-0 w-full h-full object-cover"
+          alt="onboarding animation background"
+        />
+      </video>
 
-        <div className="flex justify-center items-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSlide + "-img"}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4 }}
-              className="relative w-full aspect-square max-w-md"
-            >
-              <div className={`absolute inset-0 ${slide.bgBlur} rounded-full blur-3xl`} />
-              <img
-                className="relative z-10 w-full h-full object-contain animate-float"
-                src={slide.img}
-                alt="Onboarding illustration"
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-
-      <div className="mt-16 w-full flex flex-col items-center gap-8">
-        <div className="flex gap-3">
-          {SLIDES.map((_, idx) => (
-            <div
-              key={idx}
-              className={`w-2.5 h-2.5 rounded-full ${
-                idx === activeSlide ? "bg-indigo-600 w-6" : "bg-slate-200 dark:bg-slate-800"
-              } transition-all duration-300`}
-            />
-          ))}
-        </div>
-        <button
-          onClick={handleNext}
-          className="flex items-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95"
+      {/* Glassmorphic Navigation Bar */}
+      <nav className="relative z-10 w-full max-w-7xl mx-auto flex items-center justify-between px-8 py-6">
+        <div 
+          className="text-3xl tracking-tight text-white cursor-pointer"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
+          onClick={handleStart}
         >
-          <span>{activeSlide === SLIDES.length - 1 ? "Begin Learning" : "Continue"}</span>
-          <ArrowRight className="w-5 h-5" />
+          Velorah<sup className="text-xs font-sans">®</sup>
+        </div>
+
+        <div className="hidden md:flex items-center gap-8">
+          <span className="text-sm font-medium text-white cursor-pointer transition-colors">Home</span>
+          <span className="text-sm font-medium text-slate-400 hover:text-white cursor-pointer transition-colors">Studio</span>
+          <span className="text-sm font-medium text-slate-400 hover:text-white cursor-pointer transition-colors">About</span>
+          <span className="text-sm font-medium text-slate-400 hover:text-white cursor-pointer transition-colors">Journal</span>
+          <span className="text-sm font-medium text-slate-400 hover:text-white cursor-pointer transition-colors">Reach Us</span>
+        </div>
+
+        <button
+          onClick={handleStart}
+          className="liquid-glass rounded-full px-6 py-2.5 text-sm text-white font-medium hover:scale-[1.03] transition-all duration-300"
+        >
+          Begin Journey
+        </button>
+      </nav>
+
+      {/* Cinematic Hero Section */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 pb-40">
+        <h1
+          className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-white animate-fade-rise"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
+        >
+          Where <em className="not-italic text-slate-450 text-slate-400">dreams</em> rise <br />
+          <em className="not-italic text-slate-450 text-slate-400">through the silence.</em>
+        </h1>
+
+        <p className="animate-fade-rise-delay text-slate-400 text-base sm:text-lg max-w-2xl mt-8 leading-relaxed font-sans">
+          We're designing tools for deep thinkers, bold creators, and quiet rebels.
+          Amid the chaos, we build digital spaces for sharp focus and inspired work.
+        </p>
+
+        <button
+          onClick={handleStart}
+          className="animate-fade-rise-delay-2 liquid-glass rounded-full px-14 py-5 text-base text-white mt-12 hover:scale-[1.03] cursor-pointer transition-all duration-300 font-semibold"
+        >
+          Begin Journey
         </button>
       </div>
+
+      {/* Footer info (adds visual anchor) */}
+      <footer className="relative z-10 w-full max-w-7xl mx-auto px-8 py-6 flex justify-between text-[10px] text-slate-500 tracking-wider uppercase font-semibold">
+        <span>© 2026 Velorah Studio</span>
+        <span>All Rights Reserved</span>
+      </footer>
     </div>
   );
 };
