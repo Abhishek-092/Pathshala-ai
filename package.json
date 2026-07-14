@@ -1,0 +1,13 @@
+{
+  "name": "pathshala-ai",
+  "version": "1.0.0",
+  "description": "Offline AI Learning Operating System",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
