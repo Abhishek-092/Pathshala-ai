@@ -43,7 +43,7 @@ export default function Practice() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
-        
+
         {/* Daily Challenge */}
         <div
           onClick={() => window.reactNavigate("quiz", { conceptId: weakConcepts[0] || "chem-reactions" })}
