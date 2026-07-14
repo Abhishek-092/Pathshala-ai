@@ -58,17 +58,24 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
-  min-height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Fullscreen Layout Shell */
 .app-shell {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
+}
+
+/* Scrollable container wrapper for desktop web app */
+.app-main-viewport-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
 }
 
 /* Calming, minimal top header */
