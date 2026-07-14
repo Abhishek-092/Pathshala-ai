@@ -85,15 +85,12 @@ function setupAppListeners() {
       return;
     }
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-      const canvas = document.querySelector(".app-main-canvas");
-      if (canvas) {
-        e.preventDefault();
-        const scrollAmount = 120;
-        canvas.scrollBy({
-          top: e.key === "ArrowUp" ? -scrollAmount : scrollAmount,
-          behavior: "smooth"
-        });
-      }
+      e.preventDefault();
+      const scrollAmount = 120;
+      window.scrollBy({
+        top: e.key === "ArrowUp" ? -scrollAmount : scrollAmount,
+        behavior: "smooth"
+      });
     }
   });
 }
