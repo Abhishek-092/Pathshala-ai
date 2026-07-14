@@ -27,7 +27,7 @@ export const Onboarding: React.FC = () => {
         </nav>
       </header>
 
-      {/* Centered Cinematic Message (Shifted upwards to 22% viewport height) */}
+      {/* Centered Cinematic Message */}
       <div className="absolute top-[18vh] left-1/2 -translate-x-1/2 z-10 max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
