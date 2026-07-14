@@ -44,12 +44,12 @@ export const Onboarding: React.FC = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/35 z-5" />
 
-      {/* Premium Apple/Linear Glass Card Container */}
+      {/* Content Container (No background box, content placed directly on background) */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 max-w-2xl w-full backdrop-blur-3xl bg-white/5 dark:bg-black/30 border border-white/10 dark:border-white/5 rounded-[32px] p-10 md:p-14 shadow-[0_32px_100px_rgba(0,0,0,0.6)] flex flex-col items-center gap-8"
+        className="relative z-10 max-w-2xl w-full flex flex-col items-center gap-8"
       >
         <AnimatePresence mode="wait">
           <motion.div
