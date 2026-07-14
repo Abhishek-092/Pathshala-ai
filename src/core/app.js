@@ -85,12 +85,15 @@ function setupAppListeners() {
       return;
     }
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-      e.preventDefault();
-      const scrollAmount = 120;
-      window.scrollBy({
-        top: e.key === "ArrowUp" ? -scrollAmount : scrollAmount,
-        behavior: "smooth"
-      });
+      const wrapper = document.querySelector(".app-main-viewport-wrapper");
+      if (wrapper) {
+        e.preventDefault();
+        const scrollAmount = 120;
+        wrapper.scrollBy({
+          top: e.key === "ArrowUp" ? -scrollAmount : scrollAmount,
+          behavior: "smooth"
+        });
+      }
     }
   });
 }
