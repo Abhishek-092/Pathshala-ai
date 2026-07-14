@@ -27,8 +27,8 @@ export const Onboarding: React.FC = () => {
         </nav>
       </header>
 
-      {/* Centered Cinematic Message & Action Button (Shifted upwards) */}
-      <div className="relative z-10 my-auto max-w-4xl w-full mx-auto flex flex-col items-center justify-center text-center -mt-20">
+      {/* Centered Cinematic Message (Shifted downwards into upper-middle) */}
+      <div className="absolute top-[32vh] left-1/2 -translate-x-1/2 z-10 max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,18 +44,17 @@ export const Onboarding: React.FC = () => {
             The next chapter is always within reach.
           </p>
         </motion.div>
+      </div>
 
-        {/* Action Button positioned below the center */}
+      {/* Action Button (Positioned 18% below center at 68vh) */}
+      <div className="absolute top-[68vh] left-1/2 -translate-x-1/2 z-10">
         <button
           onClick={() => navigate("/home")}
-          className="bg-transparent hover:bg-white hover:text-black border border-white/20 text-white/90 px-12 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.05)] mt-12"
+          className="bg-transparent hover:bg-white hover:text-black border border-white/20 text-white/90 px-12 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.05)]"
         >
           Begin Journey
         </button>
       </div>
-
-      {/* Spacer to balance top header height */}
-      <div className="h-16 w-full flex-shrink-0" />
     </div>
   );
 };
