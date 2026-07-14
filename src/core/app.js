@@ -77,6 +77,25 @@ function setupAppListeners() {
       themeToggle.textContent = document.documentElement.classList.contains("dark-mode") ? "☀️ Light" : "🌙 Dark";
     });
   }
+
+  // Global Arrow keys listener for page scrolling
+  window.addEventListener("keydown", (e) => {
+    // Only intercept if we're not inside an input/textarea
+    if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") {
+      return;
+    }
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      const canvas = document.querySelector(".app-main-canvas");
+      if (canvas) {
+        e.preventDefault();
+        const scrollAmount = 120;
+        canvas.scrollBy({
+          top: e.key === "ArrowUp" ? -scrollAmount : scrollAmount,
+          behavior: "smooth"
+        });
+      }
+    }
+  });
 }
 
 // Start boot
