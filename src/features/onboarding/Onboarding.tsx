@@ -30,16 +30,15 @@ export const Onboarding: React.FC = () => {
     }
   };
 
-  return (
-    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 py-10 font-headline select-none">
+    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 pb-10 font-headline select-none">
       <img
         src="/onboarding.gif"
         alt="Onboarding Background"
         className="absolute inset-0 h-full w-full object-cover z-0 opacity-40"
       />
 
-      {/* Cinematic Top Navigation Header */}
-      <header className="relative z-10 flex justify-between items-center w-full px-12 h-16 bg-transparent -mt-2.5">
+      {/* Cinematic Top Navigation Header (Aligned to Shell's height & px spacing) */}
+      <header className="relative z-10 flex justify-between items-center w-full px-10 h-16 bg-transparent">
         <span className="text-sm font-bold tracking-widest uppercase text-white/90 cursor-pointer" onClick={() => navigate("/home")}>
           Pathshala <span className="text-cyan-400">AI</span>
         </span>
