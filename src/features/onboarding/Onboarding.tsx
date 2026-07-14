@@ -47,7 +47,7 @@ export const Onboarding: React.FC = () => {
       </div>
 
       {/* Action Button */}
-      <div className="absolute top-[68vh] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute top-[64vh] left-1/2 -translate-x-1/2 z-10">
         <button
           onClick={() => navigate("/home")}
           className="bg-transparent hover:bg-white hover:text-black border border-white/20 text-white/90 px-12 py-4 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.05)]"
