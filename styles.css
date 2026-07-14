@@ -1,20 +1,20 @@
 :root {
-  --primary-color: #6E4CE3; /* Indigo */
-  --primary-hover: #5837C7;
-  --secondary-color: #F2A33A; /* Sunset Gold */
-  --accent-color: #4E7A45; /* Forest Green */
-  --warning-color: #F4B43A;
-  --error-color: #C73A3A;
-  --bg-color: #FFF8F1; /* Warm Ivory */
-  --surface-color: #FFFCF8; /* Warm White */
+  --primary-color: #4F46E5; /* Indigo */
+  --primary-hover: #4338CA;
+  --secondary-color: #06B6D4; /* Cyan */
+  --accent-color: #22C55E; /* Success */
+  --warning-color: #F59E0B;
+  --error-color: #EF4444;
+  --bg-color: #F8FAFC;
+  --surface-color: #FFFFFF;
   
-  --text-primary: #1E1B18;
-  --text-secondary: #655C55;
-  --border-color: #DDD1C5;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border-color: #E2E8F0;
   
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(110, 76, 227, 0.06), 0 2px 4px -2px rgba(110, 76, 227, 0.06);
-  --shadow-lg: 0 24px 60px rgba(110, 76, 227, 0.10);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   
   --font-size-scale: 1.0;
   --border-radius-card: 24px; /* Premium 24px Rounded radius */
@@ -22,12 +22,12 @@
 
 /* Dark Mode Override */
 .dark-mode {
-  --bg-color: #090D16; /* Obsidian */
-  --surface-color: #121824;
-  --text-primary: #EDE2D5;
-  --text-secondary: #B7A99B;
-  --border-color: #272421;
-  --primary-color: #C8BAFF;
+  --bg-color: #0B0F19;
+  --surface-color: #151F32;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-color: #1F2E45;
+  --primary-color: #6366F1;
 }
 
 /* High Contrast Override */
