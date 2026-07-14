@@ -46,7 +46,7 @@ export const Onboarding: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Action Button (Positioned 18% below center at 68vh) */}
+      {/* Action Button */}
       <div className="absolute top-[68vh] left-1/2 -translate-x-1/2 z-10">
         <button
           onClick={() => navigate("/home")}
