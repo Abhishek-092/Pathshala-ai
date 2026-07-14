@@ -99,7 +99,7 @@ export function aiTutorPage(container, params = {}) {
         </section>
 
         <!-- Clean Interactive Input Bar -->
-        <div class="fixed bottom-24 left-1/2 transform -translate-x-1/2 w-full max-w-[600px] px-4 z-50">
+        <div class="fixed bottom-24 left-1/2 transform -translate-x-1/2 w-full max-w-[900px] px-4 z-50">
           <div class="bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-full shadow-lg p-2 flex items-center gap-2">
             <button class="w-10 h-10 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center text-slate-400 active:scale-95" id="btn-camera">📷</button>
             <input type="text" id="chat-text-input" class="flex-1 bg-transparent border-none outline-none focus:ring-0 text-sm placeholder:text-slate-400 dark:text-white px-2" placeholder="Ask anything about the topic..." />
