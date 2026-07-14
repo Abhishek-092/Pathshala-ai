@@ -30,6 +30,7 @@ export const Onboarding: React.FC = () => {
     }
   };
 
+  return (
     <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white px-8 pb-10 font-headline select-none">
       <img
         src="/onboarding.gif"
