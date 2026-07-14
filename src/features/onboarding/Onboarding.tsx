@@ -39,7 +39,7 @@ export const Onboarding: React.FC = () => {
       />
 
       {/* Cinematic Top Navigation Header */}
-      <header className="relative z-10 flex justify-between items-center w-full px-12 h-16 bg-transparent">
+      <header className="relative z-10 flex justify-between items-center w-full px-12 h-16 bg-transparent -mt-2.5">
         <span className="text-sm font-bold tracking-widest uppercase text-white/90 cursor-pointer" onClick={() => navigate("/home")}>
           Pathshala <span className="text-cyan-400">AI</span>
         </span>
