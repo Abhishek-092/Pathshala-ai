@@ -4,52 +4,35 @@ This document outlines the visual brand tokens, design principles, and UI layout
 
 ---
 
-## 1. Brand & Style
+## 1. Cinematic Onboarding Page Redesign
 
-This design system is built for a focused, high-engagement educational environment. The brand personality balances the warmth of mentorship with the rigor of formal scholarship. It evokes an emotional response of clarity, encouragement, and intellectual growth.
+### Aesthetic Vision
+The onboarding screen is designed like the opening sequence of a cinematic film. Instead of a standard SaaS/product landing page, the interface is almost invisible, letting the looping animated backdrop carry the emotion, curiosity, and focus.
 
-The design style follows a **Modern Corporate** aesthetic with **Minimalist** influences. It prioritizes content legibility and cognitive ease by utilizing expansive whitespace and a structured information hierarchy. Tactile elements are subtle, ensuring that the interface feels like a high-quality physical textbook translated into a digital medium.
-
----
-
-## 2. Core Color Tokens
-
-The palette is anchored by **Sunset Amber** (primary container/accent) to maintain energy and motivation, while **Ink Blue** (secondary) serves as the core color for typography and high-contrast UI elements to ensure AAA accessibility.
-
-| Token | Light Value | Description |
-|---|---|---|
-| `primary` | `#6E4CE3` | Deep Purple primary brand accent |
-| `primary-container` | `#ECE6FF` | Soft light purple accent tint |
-| `secondary` | `#F2A33A` | Sunset Amber accent |
-| `secondary-container` | `#FFE5B8` | Warm light amber accent tint |
-| `background` | `#FFF8F1` | Ultra-light paper cream background to reduce eye strain |
-| `surface` | `#FFFCF8` | Warm off-white for cards and interactive containers |
-| `surface-container` | `#F8F0E6` | Muted cream border highlight |
-| `on-background` | `#1E1B18` | Ink black typography |
-| `on-surface` | `#231F1C` | Secondary slate font color |
+- **Background Asset**: A fullscreen hardware-accelerated animated GIF (`/onboarding.gif`) with low opacity (`opacity-40`) to blend with the dark backdrop.
+- **Header Alignment**: A full-width (`w-full px-10`) transparent header containing the logo text `Pathshala AI` and low-opacity navigation tabs (`Courses`, `Tutor`, `Practice`, `Profile`) aligned directly to the top edge (0px top offset) to match exactly the height of the shell navbar on internal pages.
+- **Cinematic Text Placement**:
+  - Main hero text positioned using relative viewport heights at `top-[18vh]` to start in the upper-middle region.
+  - Slogan: *"Curate your library. Download once. Learn anywhere."*
+  - Subtext: *"The next chapter is always within reach."*
+- **Call to Action**: A minimalist button `[ Begin Journey ]` with subtle white borders positioned exactly at `top-[64vh]` (14% below the vertical center).
 
 ---
 
-## 3. Typography
+## 2. Core Brand Tokens
 
-The typography system pairs the editorial elegance of **Newsreader** for headings with the modern, functional legibility of **Manrope** for body content.
+### Color Palette (Google Stitch Alignment)
+- **Primary Accent**: `#3525cd` (Indigo Blue - representing intelligence and focus)
+- **Secondary Accent**: `#00668a` (Deep Cyan - representing clarity and calm)
+- **Background (Light)**: `#f8f9ff` (Soft Blue-White)
+- **Background (Dark)**: `#090d16` (Deep Obsidian)
+- **Surface**: `#ffffff` (Pure White)
 
-- **Headlines (Newsreader - Serif)**: Used for course titles, headers, and module metadata. The serif qualities provide a scholarly, authoritative feel while remaining contemporary.
-- **Body (Manrope - Sans-Serif)**: A versatile sans-serif optimized for reading on digital screens. Line heights are generous (1.5x minimum) to prevent layout fatigue.
+### Typography
+- **Headings & Logo**: `Outfit` (Geometric, clean, modern)
+- **Body & Captions**: `Inter` (Highly legible sans-serif)
 
-| Style | Font Family | Size | Weight | Line Height |
-|---|---|---|---|---|
-| **Display** | Newsreader | `48px` | `700` | `56px` |
-| **Headline Large** | Newsreader | `32px` | `600` | `40px` |
-| **Headline Medium**| Newsreader | `24px` | `600` | `32px` |
-| **Body Large** | Manrope | `18px` | `400` | `28px` |
-| **Body Medium** | Manrope | `16px` | `400` | `24px` |
-| **Label Medium** | Manrope | `14px` | `500` | `20px` |
-
----
-
-## 4. Shapes & Layout Spacing
-
-- **Standard Elements (sm/md/lg)**: `8px` to `16px` corner radius for buttons, text inputs, and bento dashboard cards.
-- **Elevation**: Tonal layers and 1px borders (`#F8F0E6`) are used to stack content elements, avoiding heavy drop shadows to sustain the "paper textbook" aesthetic.
-- **Layout Margins**: 12-column grid structure with a `1280px` maximum desktop container layout constraint.
+### Elevations & Shapes
+- **Bento & Subject Cards**: `24px` roundness (`rounded-[24px]` or `rounded-[32px]`)
+- **Interactive Buttons / Inputs**: `12px` or `16px` roundness (`rounded-xl` / `rounded-2xl`)
+- **Shadows**: Soft, low-intensity elevation shadows (`shadow-sm` / `shadow-md` with low alpha levels)
