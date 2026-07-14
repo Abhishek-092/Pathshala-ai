@@ -15,7 +15,7 @@ export async function lessonPage(container, params = {}) {
   const mapping = await curriculumEngine.getCompetencyMapping(conceptId);
 
   container.innerHTML = `
-    <main class="pb-32 max-w-[800px] mx-auto">
+    <main class="pb-32 max-w-[1280px] mx-auto">
       
       <!-- Hero Illustration Area -->
       <section class="mb-12 relative h-80 rounded-[32px] overflow-hidden group shadow-md border border-slate-200/40">
