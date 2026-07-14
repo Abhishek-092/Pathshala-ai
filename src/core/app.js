@@ -61,6 +61,14 @@ function setupAppListeners() {
     });
   });
 
+  // Logo home button listener
+  const logoHome = document.getElementById("btn-logo-home");
+  if (logoHome) {
+    logoHome.addEventListener("click", () => {
+      router.navigate("dashboard");
+    });
+  }
+
   // Simulator emulator chrome button listeners
   const themeToggle = document.getElementById("chrome-darkmode-toggle");
   if (themeToggle) {
