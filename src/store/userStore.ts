@@ -12,7 +12,7 @@ interface UserState {
 }
 
 export const useUserStore = create<UserState>((set, get) => ({
-  name: "Abhishek Thompson",
+  name: "Guest User",
   xp: 1200,
   streak: 1,
   level: 1,
@@ -22,7 +22,7 @@ export const useUserStore = create<UserState>((set, get) => ({
     const streakSett = await db.settings.get("userStreak");
     
     set({
-      name: nameSett?.value || "Abhishek Thompson",
+      name: nameSett?.value || "Guest User",
       xp: xpSett?.value || 1200,
       streak: streakSett?.value || 1,
       level: Math.floor((xpSett?.value || 1200) / 1000) + 1
