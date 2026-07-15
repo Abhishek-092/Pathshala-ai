@@ -27,10 +27,6 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
                 Pathshala <span className="text-slate-800 dark:text-white font-headline">AI</span>
               </span>
             </Link>
-            <span className="offline-dot-badge text-xs flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Local Engine Active
-            </span>
           </div>
 
           <nav className="header-center flex gap-4">
