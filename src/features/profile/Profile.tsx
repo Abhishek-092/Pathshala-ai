@@ -8,6 +8,8 @@ export const Profile: React.FC = () => {
   const { xp, streak, name } = useUserStore();
   const { dyslexicFont, highContrast, darkMode, toggleDyslexicFont, toggleHighContrast, toggleDarkMode } = useSettingsStore();
 
+  const initials = name ? name.split(" ").map(n => n[0]).join("").toUpperCase() : "GU";
+
   return (
     <Shell>
       <div className="pb-32 max-w-[1280px] mx-auto">
@@ -15,8 +17,8 @@ export const Profile: React.FC = () => {
         {/* Profile Header */}
         <section className="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="relative">
-            <div className="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-indigo-600 to-cyan-500 ring-4 ring-white shadow-md relative overflow-hidden">
-              <img className="w-full h-full object-cover rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop&crop=face" alt="User avatar" />
+            <div className="w-32 h-32 rounded-full flex items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-300 text-3xl font-bold font-headline shadow-md border-4 border-white dark:border-slate-800">
+              {initials}
             </div>
             <div className="absolute -bottom-2 -right-2 bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-white font-bold text-sm shadow-md">
               12
