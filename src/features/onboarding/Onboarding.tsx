@@ -16,8 +16,8 @@ export const Onboarding: React.FC = () => {
 
       {/* Cinematic Top Navigation Header (Aligned to Shell's height & px spacing) */}
       <header className="relative z-10 flex justify-between items-center w-full px-10 h-16 bg-transparent">
-        <span className="text-sm font-bold tracking-widest uppercase text-white/90 cursor-pointer" onClick={() => navigate("/home")}>
-          Pathshala <span className="text-cyan-400">AI</span>
+        <span className="flex items-center cursor-pointer" onClick={() => navigate("/home")}>
+          <img src="/logo-dark.svg" className="h-5 w-auto" alt="Pathshala AI" />
         </span>
         <nav className="flex gap-8 text-[11px] font-medium tracking-widest uppercase text-white/40">
           <span className="hover:text-white/80 transition-colors cursor-pointer" onClick={() => navigate("/home")}>Courses</span>
