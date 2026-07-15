@@ -6,6 +6,7 @@ interface UserState {
   xp: number;
   streak: number;
   level: number;
+  pfp?: string;
   loadUserProfile: () => Promise<void>;
   addXp: (amount: number) => Promise<void>;
   incrementStreak: () => Promise<void>;
@@ -16,6 +17,7 @@ export const useUserStore = create<UserState>((set, get) => ({
   xp: 1200,
   streak: 1,
   level: 1,
+  pfp: undefined,
   loadUserProfile: async () => {
     const nameSett = await db.settings.get("userName");
     const xpSett = await db.settings.get("userXp");
