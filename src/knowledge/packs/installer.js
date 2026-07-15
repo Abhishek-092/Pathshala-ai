@@ -1,5 +1,5 @@
-import { putStoreValue, getStoreValue } from "../../storage/indexeddb/database.js";
-import { eventBus } from "../../core/eventBus.js";
+import { putStoreValue, getStoreValue } from "../../services/storage/database";
+import { eventBus } from "../../core/eventBus";
 
 class KnowledgePackInstaller {
   async installPack(packId, progressCallback) {
