@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from "react";
 import { createHashRouter, Navigate } from "react-router-dom";
 
 // Lazy-loaded features
-const Splash = lazy(() => import("../features/onboarding/Splash"));
 const Onboarding = lazy(() => import("../features/onboarding/Onboarding"));
 const Dashboard = lazy(() => import("../features/home/Dashboard"));
 const Subjects = lazy(() => import("../features/learn/Subjects"));
@@ -24,17 +23,13 @@ export const router = createHashRouter([
     path: "/",
     element: (
       <Suspense fallback={<PageLoader />}>
-        <Splash />
+        <Onboarding />
       </Suspense>
     )
   },
   {
     path: "/onboarding",
-    element: (
-      <Suspense fallback={<PageLoader />}>
-        <Onboarding />
-      </Suspense>
-    )
+    element: <Navigate to="/" replace />
   },
   {
     path: "/home",
