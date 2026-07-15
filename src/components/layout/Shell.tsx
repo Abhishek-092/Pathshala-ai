@@ -8,7 +8,7 @@ interface ShellProps {
 }
 
 export const Shell: React.FC<ShellProps> = ({ children }) => {
-  const streak = useUserStore((s) => s.streak);
+  const { name, pfp } = useUserStore();
   const location = useLocation();
 
   const isNavActive = (path: string) => {
