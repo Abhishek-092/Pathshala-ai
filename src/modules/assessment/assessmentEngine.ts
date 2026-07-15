@@ -1,3 +1,5 @@
+import { db } from "../../services/storage/db";
+
 export interface QuizQuestion {
   id: string;
   conceptId: string;
@@ -60,6 +62,35 @@ class AssessmentEngine {
     } else {
       return { stars: 1, title: "Keep Practicing", message: "Review the lesson materials and try again. Practice is key to learning." };
     }
+  }
+
+  async generateQuizForConcept(conceptId: string, packId: string): Promise<QuizQuestion[]> {
+    const pack = await db.packs.get(packId);
+    if (!pack || !pack.quizBank) return [];
+
+    const questions = pack.quizBank.filter((q: any) => q.conceptId === conceptId);
+    
+    if (questions.length === 0) {
+      return [
+        {
+          id: `gen-${conceptId}-1`,
+          conceptId,
+          question: `Which of the following describes the key principle of ${conceptId.replace("-", " ")}?`,
+          options: ["Core Mechanism", "External Process", "Random Transition", "Non-reactive state"],
+          correctAnswer: "Core Mechanism",
+          explanation: "The core mechanism represents the central function of this concept."
+        }
+      ];
+    }
+
+    return questions.map((q: any) => ({
+      id: q.id,
+      conceptId: q.conceptId,
+      question: q.question,
+      options: q.options,
+      correctAnswer: q.answer || q.correctAnswer || "",
+      explanation: q.explanation || ""
+    }));
   }
 }
 
