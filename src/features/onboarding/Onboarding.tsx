@@ -16,7 +16,7 @@ export const Onboarding: React.FC = () => {
 
       {/* Cinematic Top Navigation Header (Aligned to Shell's height & px spacing) */}
       <header className="relative z-10 flex justify-between items-center w-full px-2 h-16 bg-transparent">
-        <span className="flex items-center gap-2.5 ">
+        <span className="flex items-center gap-2.5 ml-4 ">
           <img src="/logo-dark.svg" className="h-14 w-auto translate-x-2" alt="Pathshala AI" />
           <span className="text-sm font-bold tracking-widest uppercase text-white /90 font-headline -translate-x-2">
             Pathshala <span className="text-cyan-400 font-headline">AI</span>
