@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Star, Award } from "lucide-react";
 import { Shell } from "../../components/layout/Shell";
-import { generateQuizForConcept } from "../../learning/assessment/generator.js";
 import { assessmentEngine, type QuizQuestion, type GradingReport } from "../../modules/assessment/assessmentEngine";
 
 export const Quiz: React.FC = () => {
@@ -20,7 +19,7 @@ export const Quiz: React.FC = () => {
 
   useEffect(() => {
     async function load() {
-      const qList = await generateQuizForConcept(activeConceptId, "class10-science");
+      const qList = await assessmentEngine.generateQuizForConcept(activeConceptId, "class10-science");
       
       if (qList && qList.length > 0) {
         setQuestions(qList);
