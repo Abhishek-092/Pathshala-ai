@@ -91,6 +91,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
               )}
             </Link>
           </div>
+        </div>
       </header>
 
       <div className="app-main-viewport-wrapper flex-1 overflow-y-auto w-full bg-slate-50 dark:bg-slate-900">
