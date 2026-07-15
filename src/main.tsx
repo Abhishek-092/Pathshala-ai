@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./app/App";
-import { initDB } from "./storage/indexeddb/database.js";
+import { initDB } from "./services/storage/database";
 import { packInstaller } from "./knowledge/packs/installer.js";
 
 async function bootApp() {
@@ -12,7 +12,7 @@ async function bootApp() {
   if (!isScienceInstalled) {
     try {
       const data = await packInstaller.loadPackFromDirectory("class10-science");
-      const { putStoreValue } = await import("./storage/indexeddb/database.js");
+      const { putStoreValue } = await import("./services/storage/database");
       await putStoreValue("packs", data);
     } catch (e) {
       console.warn("Science pack auto-boot fallback", e);
