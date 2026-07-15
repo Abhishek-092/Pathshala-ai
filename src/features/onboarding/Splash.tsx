@@ -38,12 +38,8 @@ export const Splash: React.FC = () => {
       >
         <div className="absolute inset-0 bg-indigo-500/10 blur-[100px] rounded-full scale-150" />
         <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-          <div
-            className="w-full h-full bg-contain bg-no-repeat bg-center"
-            style={{
-              backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFp5mFN3euV5aEHF40r9AYPbcvugSBoDP0dt09uyaxxKSuGziFfOzZTkwtP3yJrUx8ifjiIM-5CE1wHDt1nYWWG3KTCMZuY9QKPnrr0XO_Rv1VOyJtYskXCOcl3-MTOcsKe72Zoc-ghqhQERgkm2p5f5hnZbTNBdtf5BODgzIllpt6Y7aC1VYMcSt3g6dc8LgJ9vIvbdJGgrGjurhjL4PoVPfGv92vnaqUMbOvOcstsLlMN2IjdHsStQ')"
-            }}
-          />
+          <img src="/logo-light.svg" className="w-48 h-auto block dark:hidden object-contain" alt="Pathshala AI logo" />
+          <img src="/logo-dark.svg" className="w-48 h-auto hidden dark:block object-contain" alt="Pathshala AI logo" />
         </div>
       </motion.div>
 
@@ -53,9 +49,6 @@ export const Splash: React.FC = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="space-y-4 max-w-lg"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight font-headline">
-          Pathshala <span className="font-extrabold text-slate-800 dark:text-white">AI</span>
-        </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-headline font-semibold">
           Learn Without Limits. <br />
           <span className="text-cyan-600 font-medium">Powered by On-Device AI.</span>
