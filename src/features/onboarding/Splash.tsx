@@ -29,7 +29,15 @@ export const Splash: React.FC = () => {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-900 px-6 text-center">
+    <div 
+      className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-amber-500 via-amber-400 to-yellow-500 px-6 text-center relative overflow-hidden select-none"
+      style={{
+        backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.25) 1.5px, transparent 1.5px)",
+        backgroundSize: "32px 32px"
+      }}
+    >
+      {/* Soft center white radial glow texture */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0%,transparent_65%)] pointer-events-none z-0" />
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
