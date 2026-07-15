@@ -16,7 +16,7 @@ export const Profile: React.FC = () => {
         <section className="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="relative">
             <div className="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-indigo-600 to-cyan-500 ring-4 ring-white shadow-md relative overflow-hidden">
-              <img className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsh-m9tO71IRFyOY2I9gnG829LwpDBoXNMWIfLdSz1X946MVGzij2LLC9xohGycepoPFdxSwkNCDvDfBXawIg0V8mAzwNrfZgp6w-SNY-hUvsQE6oFWRPW0vNbF8CXsxvS215_lZiPzgt-Gs0-hf8ty99-DWLeOILH_DRuHRsgTYP5QkTb5eKrVIcp2v7iZ3ru6HqyrGd9975ahRMXL7RIfSq5TPHxoUY2rL8z4eEvRFz-L07-tgSBCw" alt="Alex portrait" />
+              <img className="w-full h-full object-cover rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop&crop=face" alt="User avatar" />
             </div>
             <div className="absolute -bottom-2 -right-2 bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-white font-bold text-sm shadow-md">
               12
