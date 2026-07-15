@@ -70,19 +70,27 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
               <CheckSquare className="w-4 h-4" />
               Practice
             </Link>
-            <Link
-              to="/profile"
-              className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/profile")
-                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
-                }`}
-            >
-              <User className="w-4 h-4" />
-              Profile
-            </Link>
           </nav>
 
-        </div>
+          {/* Profile Circle Button (Right corner alignment) */}
+          <div className="header-right flex items-center justify-end">
+            <Link
+              to="/profile"
+              className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold transition-all overflow-hidden border border-slate-200 dark:border-slate-800 ${
+                isNavActive("/profile")
+                  ? "ring-2 ring-indigo-600 dark:ring-indigo-400"
+                  : "hover:bg-slate-50 dark:hover:bg-slate-850"
+              }`}
+            >
+              {pfp ? (
+                <img src={pfp} className="w-full h-full object-cover" alt="Profile" />
+              ) : (
+                <div className="w-full h-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xs font-bold font-headline">
+                  {name ? name.split(" ").map(n => n[0]).join("").toUpperCase() : "GU"}
+                </div>
+              )}
+            </Link>
+          </div>
       </header>
 
       <div className="app-main-viewport-wrapper flex-1 overflow-y-auto w-full bg-slate-50 dark:bg-slate-900">
