@@ -20,7 +20,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
       <header className="app-header flex-shrink-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
         <div className="max-w-[1440px] mx-auto px-10 h-16 flex items-center justify-between w-full">
           <div className="header-left flex items-center gap-3">
-            <Link to="/home" className="logo-container flex items-center gap-2.5 hover:opacity-80 transition-opacity -ml-5">
+            <Link to="/home" className="logo-container flex items-center gap-2.5 hover:opacity-80 transition-opacity -ml-6">
               <img src="/logo-light.svg" className="h-14 w-auto translate-x-2 block dark:hidden" alt="Pathshala AI" />
               <img src="/logo-dark.svg" className="h-14 w-auto translate-x-2 hidden dark:block" alt="Pathshala AI" />
               <span className="logo-text font-bold text-lg text-indigo-600 dark:text-indigo-400 font-headline">
@@ -37,8 +37,8 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             <Link
               to="/home"
               className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/home")
-                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
+                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
                 }`}
             >
               <Home className="w-4 h-4" />
@@ -47,8 +47,8 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             <Link
               to="/learn"
               className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/learn")
-                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
+                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
                 }`}
             >
               <BookOpen className="w-4 h-4" />
@@ -57,8 +57,8 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             <Link
               to="/tutor"
               className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/tutor")
-                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
+                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
                 }`}
             >
               <Brain className="w-4 h-4" />
@@ -67,8 +67,8 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             <Link
               to="/practice"
               className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/practice")
-                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
+                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
                 }`}
             >
               <CheckSquare className="w-4 h-4" />
@@ -77,8 +77,8 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             <Link
               to="/profile"
               className={`nav-item flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${isNavActive("/profile")
-                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
+                ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-850"
                 }`}
             >
               <User className="w-4 h-4" />
