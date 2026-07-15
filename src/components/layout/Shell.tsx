@@ -82,12 +82,6 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             </Link>
           </nav>
 
-          <div className="header-right flex items-center gap-4">
-            <div className="flex items-center gap-1.5 text-amber-500 font-bold text-sm">
-              <span>🔥</span>
-              <span>{streak} Day Streak</span>
-            </div>
-          </div>
         </div>
       </header>
 
