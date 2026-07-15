@@ -85,9 +85,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
               {pfp ? (
                 <img src={pfp} className="w-full h-full object-cover" alt="Profile" />
               ) : (
-                <div className="w-full h-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xs font-bold font-headline">
-                  {name ? name.split(" ").map(n => n[0]).join("").toUpperCase() : "GU"}
-                </div>
+                <User className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
               )}
             </Link>
           </div>
