@@ -19,7 +19,7 @@ const PageLoader: React.FC = () => (
   </div>
 );
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: (
