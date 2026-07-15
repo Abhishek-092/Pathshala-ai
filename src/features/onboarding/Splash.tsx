@@ -47,8 +47,9 @@ export const Splash: React.FC = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="space-y-4 max-w-lg"
-      >
+        <h1 className="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight font-headline">
+          Pathshala <span className="text-slate-800 dark:text-white font-headline">AI</span>
+        </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-headline font-semibold">
           Learn Without Limits. <br />
           <span className="text-cyan-600 font-medium">Powered by On-Device AI.</span>
