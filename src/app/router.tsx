@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom";
 
 // Lazy-loaded features
 const Splash = lazy(() => import("../features/onboarding/Splash"));
