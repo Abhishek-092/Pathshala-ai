@@ -21,7 +21,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
         <div className="header-left flex items-center gap-3">
           <Link to="/home" className="logo-container flex items-center gap-2.5 hover:opacity-80 transition-opacity">
             <img src="/logo-light.svg" className="h-14 w-auto block dark:hidden" alt="Pathshala AI" />
-            <img src="/logo-dark.svg" className="h-10 w-auto hidden dark:block" alt="Pathshala AI" />
+            <img src="/logo-dark.svg" className="h-14 w-auto hidden dark:block" alt="Pathshala AI" />
             <span className="logo-text font-bold text-lg text-indigo-600 dark:text-indigo-400 font-headline">
               Pathshala <span className="text-slate-800 dark:text-white font-headline">AI</span>
             </span>
