@@ -19,8 +19,9 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
     <div className="app-shell flex flex-col h-screen overflow-hidden">
       <header className="app-header flex-shrink-0 flex items-center justify-between px-10 h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
         <div className="header-left flex items-center gap-3">
-          <Link to="/home" className="logo-text font-bold text-lg text-indigo-600 dark:text-indigo-400 hover:opacity-80 transition-opacity">
-            Pathshala AI
+          <Link to="/home" className="logo-container flex items-center hover:opacity-80 transition-opacity">
+            <img src="/logo-light.svg" className="h-7 w-auto block dark:hidden" alt="Pathshala AI" />
+            <img src="/logo-dark.svg" className="h-7 w-auto hidden dark:block" alt="Pathshala AI" />
           </Link>
           <span className="offline-dot-badge text-xs flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
