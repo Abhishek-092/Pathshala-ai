@@ -20,7 +20,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
       <header className="app-header flex-shrink-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
         <div className="max-w-[1440px] mx-auto px-10 h-16 flex items-center justify-between w-full">
           <div className="header-left flex items-center gap-3">
-            <Link to="/home" className="logo-container flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+            <Link to="/home" className="logo-container flex items-center gap-2.5 hover:opacity-80 transition-opacity -ml-4">
               <img src="/logo-light.svg" className="h-14 w-auto translate-x-2 block dark:hidden" alt="Pathshala AI" />
               <img src="/logo-dark.svg" className="h-14 w-auto translate-x-2 hidden dark:block" alt="Pathshala AI" />
               <span className="logo-text font-bold text-lg text-indigo-600 dark:text-indigo-400 font-headline">
