@@ -29,7 +29,7 @@ export const Splash: React.FC = () => {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-900 px-6 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-amber-500 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25)_0%,transparent_80%),radial-gradient(rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:100%_100%,20px_20px] px-6 text-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
