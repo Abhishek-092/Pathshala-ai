@@ -42,12 +42,11 @@ export const Splash: React.FC = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative mb-12"
+        className="relative mb-12 z-10"
       >
-        <div className="absolute inset-0 bg-indigo-500/10 blur-[100px] rounded-full scale-150" />
+        <div className="absolute inset-0 bg-white/20 blur-[100px] rounded-full scale-150" />
         <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-          <img src="/logo-light.svg" className="w-48 h-auto block dark:hidden object-contain" alt="Pathshala AI logo" />
-          <img src="/logo-dark.svg" className="w-48 h-auto hidden dark:block object-contain" alt="Pathshala AI logo" />
+          <img src="/logo-light.svg" className="w-48 h-auto object-contain" alt="Pathshala AI logo" />
         </div>
       </motion.div>
 
@@ -55,21 +54,21 @@ export const Splash: React.FC = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="space-y-4 max-w-lg"
+        className="space-y-4 max-w-lg z-10"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight font-headline">
-          Pathshala <span className="text-slate-800 dark:text-white font-headline">AI</span>
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight font-headline">
+          Pathshala <span className="text-white font-headline">AI</span>
         </h1>
-        <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-headline font-semibold">
+        <p className="text-xl md:text-2xl text-slate-800 font-headline font-semibold">
           Learn Without Limits. <br />
-          <span className="text-cyan-600 font-medium">Powered by On-Device AI.</span>
+          <span className="text-white font-medium">Powered by On-Device AI.</span>
         </p>
 
         <div className="pt-12 w-48 mx-auto">
-          <div className="h-1 bg-slate-100 dark:bg-slate-850 rounded-full overflow-hidden relative">
-            <div className="h-full bg-indigo-600 absolute left-0 top-0 animate-pulse w-full" />
+          <div className="h-1 bg-white/35 rounded-full overflow-hidden relative">
+            <div className="h-full bg-slate-900 absolute left-0 top-0 animate-pulse w-full" />
           </div>
-          <p className="mt-4 text-xs text-slate-400 tracking-widest uppercase font-semibold">
+          <p className="mt-4 text-xs text-slate-900/70 tracking-widest uppercase font-semibold">
             {STATUSES[statusIdx]}
           </p>
         </div>
