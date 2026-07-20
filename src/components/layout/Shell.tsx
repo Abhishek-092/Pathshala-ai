@@ -53,7 +53,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
       {/* Main Body - Sidebar + Viewport Container */}
       <div className="flex flex-1 overflow-hidden w-full">
         {/* Left Sidebar */}
-        <aside className="w-52 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 py-4 px-0">
+        <aside className="w-28 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 py-4 px-0">
           <nav className="flex flex-col gap-1.5 w-full">
             <Link
               to="/home"
