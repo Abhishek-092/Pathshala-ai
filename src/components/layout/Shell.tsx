@@ -53,56 +53,56 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
       {/* Main Body - Sidebar + Viewport Container */}
       <div className="flex flex-1 overflow-hidden w-full">
         {/* Left Sidebar */}
-        <aside className="w-[21px] border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 py-4 px-[0.5px] items-center">
-          <nav className="flex flex-col gap-2 w-full items-center">
+        <aside className="w-52 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 py-4 px-0">
+          <nav className="flex flex-col gap-1.5 w-full">
             <Link
               to="/home"
-              className={`nav-item flex items-center justify-center p-0 rounded text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/home")
-                  ? "text-indigo-600 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:opacity-80"
+                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
               }`}
-              title="Home"
             >
-              <Home className="w-5 h-5 flex-shrink-0" />
+              <Home className="w-5 h-5" />
+              <span>Home</span>
             </Link>
             <Link
               to="/learn"
-              className={`nav-item flex items-center justify-center p-0 rounded text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/learn")
-                  ? "text-indigo-600 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:opacity-80"
+                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
               }`}
-              title="Learn"
             >
-              <BookOpen className="w-5 h-5 flex-shrink-0" />
+              <BookOpen className="w-5 h-5" />
+              <span>Learn</span>
             </Link>
             <Link
               to="/tutor"
-              className={`nav-item flex items-center justify-center p-0 rounded text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/tutor")
-                  ? "text-indigo-600 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:opacity-80"
+                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
               }`}
-              title="AI Tutor"
             >
-              <Brain className="w-5 h-5 flex-shrink-0" />
+              <Brain className="w-5 h-5" />
+              <span>AI Tutor</span>
             </Link>
             <Link
               to="/practice"
-              className={`nav-item flex items-center justify-center p-0 rounded text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/practice")
-                  ? "text-indigo-600 dark:text-indigo-400"
-                  : "text-slate-600 dark:text-slate-400 hover:opacity-80"
+                  ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
               }`}
-              title="Practice"
             >
-              <CheckSquare className="w-5 h-5 flex-shrink-0" />
+              <CheckSquare className="w-5 h-5" />
+              <span>Practice</span>
             </Link>
           </nav>
 
-          <div className="text-[7px] text-slate-400 dark:text-slate-500 font-semibold tracking-widest uppercase mt-auto rotate-90 origin-center whitespace-nowrap translate-y-4 select-none">
-            P.AI
+          <div className="text-[10px] text-slate-400 dark:text-slate-500 font-semibold tracking-widest uppercase mt-auto px-4">
+            Pathshala AI
           </div>
         </aside>
 
