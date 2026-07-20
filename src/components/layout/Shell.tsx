@@ -53,11 +53,11 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
       {/* Main Body - Sidebar + Viewport Container */}
       <div className="flex flex-1 overflow-hidden w-full">
         {/* Left Sidebar */}
-        <aside className="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 p-6">
-          <nav className="flex flex-col gap-2 w-full">
+        <aside className="w-52 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between flex-shrink-0 z-40 p-4">
+          <nav className="flex flex-col gap-1.5 w-full">
             <Link
               to="/home"
-              className={`nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/home")
                   ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
                   : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
@@ -68,7 +68,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             </Link>
             <Link
               to="/learn"
-              className={`nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/learn")
                   ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
                   : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
@@ -79,7 +79,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             </Link>
             <Link
               to="/tutor"
-              className={`nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/tutor")
                   ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
                   : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
@@ -90,7 +90,7 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
             </Link>
             <Link
               to="/practice"
-              className={`nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+              className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isNavActive("/practice")
                   ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/20 dark:text-indigo-400"
                   : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
