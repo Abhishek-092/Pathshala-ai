@@ -100,10 +100,6 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
               <span>Practice</span>
             </Link>
           </nav>
-
-          <div className="text-[10px] text-slate-400 dark:text-slate-500 font-semibold tracking-widest uppercase mt-auto px-4">
-            Pathshala AI
-          </div>
         </aside>
 
         {/* Right Viewport Content Area */}
