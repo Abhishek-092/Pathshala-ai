@@ -10,6 +10,13 @@ interface ShellProps {
 export const Shell: React.FC<ShellProps> = ({ children }) => {
   const { name, pfp } = useUserStore();
   const location = useLocation();
+  const viewportRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (viewportRef.current) {
+      viewportRef.current.focus();
+    }
+  }, [location.pathname]);
 
   const isNavActive = (path: string) => {
     return location.pathname.startsWith(path);
