@@ -69,9 +69,9 @@ export const AiTutor: React.FC = () => {
     <Shell>
       <div className="pb-32 max-w-[1280px] mx-auto">
         <section className="flex flex-col items-center mb-12">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6">
+          <div className="relative w-80 h-80 md:w-[500px] md:h-[320px] mb-6">
             <div className="relative z-10 w-full h-full flex items-center justify-center animate-float">
-              <img className="w-40 h-40 md:w-52 md:h-52 drop-shadow-2xl object-contain scale-200 transition-transform" src="/tutor-avatar.svg" alt="AI companion" />
+              <img className="w-80 h-80 md:w-[500px] md:h-[320px] drop-shadow-2xl object-contain" src="/tutor-avatar.svg" alt="AI companion" />
             </div>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-center text-slate-800 dark:text-white font-headline mb-2">Hello, Guest. What shall we master today?</h1>
