@@ -70,7 +70,7 @@ export const AiTutor: React.FC = () => {
   return (
     <Shell>
       <div className="pb-32 max-w-[1280px] mx-auto">
-        <section className="flex flex-col items-center mb-8 -mt-8">
+        <section className="flex flex-col items-center mb-12 -mt-12">
           <div className="relative w-80 h-52 md:w-[480px] md:h-[320px] mb-4">
             <div className="relative z-10 w-full h-full flex items-center justify-center animate-float">
               <img className="w-80 h-52 md:w-[480px] md:h-[320px] drop-shadow-2xl object-contain" src="/tutor-avatar.svg" alt="AI companion" />
