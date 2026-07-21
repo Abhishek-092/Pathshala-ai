@@ -26,7 +26,9 @@ export const AiTutor: React.FC = () => {
   }, [conceptId]);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 1 || isTyping) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages, isTyping]);
 
   const handleSend = async (textToSend?: string) => {
