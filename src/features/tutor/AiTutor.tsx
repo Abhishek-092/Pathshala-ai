@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { Send, ArrowRight, Lightbulb, Compass, Award } from "lucide-react";
 import { Shell } from "../../components/layout/Shell";
 import { aiOrchestrator } from "../../modules/ai/Orchestrator";
+import { TutorAvatar } from "./TutorAvatar";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -71,7 +72,7 @@ export const AiTutor: React.FC = () => {
         <section className="flex flex-col items-center mb-12">
           <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6">
             <div className="relative z-10 w-full h-full flex items-center justify-center animate-float">
-              <img className="w-40 h-40 md:w-52 md:h-52 drop-shadow-2xl object-contain" src="/tutor-avatar.svg" alt="AI companion" />
+              <TutorAvatar className="w-40 h-40 md:w-52 md:h-52 drop-shadow-2xl" />
             </div>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-center text-slate-800 dark:text-white font-headline mb-2">Hello, Guest. What shall we master today?</h1>
