@@ -110,7 +110,11 @@ export const Shell: React.FC<ShellProps> = ({ children }) => {
         </aside>
 
         {/* Right Viewport Content Area */}
-        <div className="app-main-viewport-wrapper flex-1 overflow-y-auto w-full bg-slate-50 dark:bg-slate-900">
+        <div 
+          ref={viewportRef}
+          tabIndex={-1}
+          className="app-main-viewport-wrapper flex-1 overflow-y-auto w-full bg-slate-50 dark:bg-slate-900 focus:outline-none"
+        >
           <main className="app-main-canvas max-w-[1440px] mx-auto px-10 py-10">
             {children}
           </main>
