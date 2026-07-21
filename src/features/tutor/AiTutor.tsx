@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import { Send, ArrowRight, Lightbulb, Compass, Award } from "lucide-react";
 import { Shell } from "../../components/layout/Shell";
 import { aiOrchestrator } from "../../modules/ai/Orchestrator";
-import { TutorAvatar } from "./TutorAvatar";
 
 interface ChatMessage {
   role: "user" | "assistant";
