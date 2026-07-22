@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Send, ArrowRight, Lightbulb, Compass, Award } from "lucide-react";
+import { Send, ArrowRight, Lightbulb, Compass, Award, Camera, Mic } from "lucide-react";
 import { Shell } from "../../components/layout/Shell";
 import { aiOrchestrator } from "../../modules/ai/Orchestrator";
 
