@@ -135,7 +135,9 @@ export const AiTutor: React.FC = () => {
 
         <div className="fixed bottom-24 left-1/2 transform -translate-x-1/2 w-full max-w-[900px] px-4 z-50">
           <div className="bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 rounded-full shadow-lg p-2 flex items-center gap-2">
-            <button onClick={() => handleSend("Explain with electrochemistry diagram.")} className="w-10 h-10 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center text-slate-400 active:scale-95">📷</button>
+            <button onClick={() => handleSend("Explain with electrochemistry diagram.")} className="w-10 h-10 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center text-slate-450 dark:text-slate-400 active:scale-95">
+              <Camera className="w-5 h-5" />
+            </button>
             <input
               type="text"
               value={inputText}
@@ -144,7 +146,9 @@ export const AiTutor: React.FC = () => {
               className="flex-1 bg-transparent border-none outline-none focus:ring-0 text-sm placeholder:text-slate-400 dark:text-white px-2"
               placeholder="Ask anything about the topic..."
             />
-            <button onClick={() => handleSend("Define synthesis reactions.")} className="w-10 h-10 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center text-slate-400 active:scale-95">🎤</button>
+            <button onClick={() => handleSend("Define synthesis reactions.")} className="w-10 h-10 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center text-slate-450 dark:text-slate-400 active:scale-95">
+              <Mic className="w-5 h-5" />
+            </button>
             <button onClick={() => handleSend()} className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center active:scale-95">
               <Send className="w-4 h-4" />
             </button>
